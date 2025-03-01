@@ -1,1 +1,36 @@
-@import 'tailwindcss';
+@import "tailwindcss";
+
+@layer components {
+  .wrapper {
+    @apply w-[90%] mx-auto overflow-hidden max-w-screen-xl;
+  }
+
+  .images {
+    @apply w-full h-full object-cover rounded-4xl;
+  }
+
+  .button {
+    @apply bg-blue-600 text-white font-bold block w-max py-4 px-12 rounded-full shadow-md shadow-blue-800/30 hover:bg-blue-950;
+  }
+
+  .a-hover {
+    @apply hover:text-blue-500;
+  }
+
+  .footer-area {
+    grid-template-areas:
+      "form"
+      "navigation"
+      "social-media"
+      "logo"
+      "copy";
+  }
+
+  @media (min-width: 1024px) {
+    .footer-areaResponsive {
+      grid-template-areas:
+        "logo           navigation  form"
+        "social-media   navigation  copy";
+    }
+  }
+}

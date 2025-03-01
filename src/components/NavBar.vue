@@ -1,13 +1,15 @@
 <template>
   <nav class="wrapper h-20 flex items-center justify-between">
-    <a href="index.html" class="w-1/3 max-w-[200px]">
-      <img class="w-full" src="./assets/postersIncLogo.png" alt="postersIncLogo" />
+    <a href="index.html" class="w-1/3 max-w-[300px]">
+      <img class="w-full" src="../assets/images/postersIncLogo.webp" alt="postersIncLogo" />
     </a>
     <input type="checkbox" name="" id="menu" class="peer hidden" />
     <label
       for="menu"
-      class="bg-[url('../src/assets/img/menu-hamburguesa.svg')] w-6 h-5 bg-cover bg-center cursor-pointer peer-checked:bg-[url('../src/assets/img/cruz.svg')] transition-all z-50 md:hidden"
-    ></label>
+      class="w-auto h-auto cursor-pointer transition-all z-50 md:hidden peer-checked:hidden"
+    >
+      <MenuIcon class="stroke-3 w-12 h-10 fill-amber-100" />
+    </label>
     <div
       class="fixed inset-0 bg-gradient-to-b from-sky-400/70 to-blue-800/70 translate-x-full z-40 peer-checked:translate-x-0 transition-transform duration-[0.6s] ease-[cubic-bezier(0.83, 0, 0.17, 1)] md:static md:translate-x-0 md:bg-none"
     >
@@ -25,5 +27,7 @@
     <a href="Tu Posters Aqui" class="button py-3 hidden lg:block">CTA</a>
   </nav>
 </template>
-<script setup></script>
+<script setup>
+import MenuIcon from '@/components/icon/MenuIcon.vue'
+</script>
 <style scoped></style>
