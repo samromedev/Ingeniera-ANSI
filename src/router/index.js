@@ -1,9 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import ErrorPage from '@/views/ErrorPage.vue' // Asegúrate de que este archivo exista
+import ErrorPage from '@/views/ErrorPage.vue'
+import HomePage from '@/views/HomePage.vue'
 
 const routes = [
   {
-    path: '/:pathMatch(.*)*', // Ruta para manejar errores 404
+    path: '/',
+    redirect: '/home', // Or whatever default page you want
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: HomePage,
+  },
+  {
+    path: '/:pathMatch(.*)*',
     name: 'ErrorPage',
     component: ErrorPage,
   },

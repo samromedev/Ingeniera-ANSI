@@ -3,11 +3,11 @@
     <h1>{{ header }}</h1>
     <form @submit.prevent="submitForm" class="bg-red-200 flex justify-center flex-col">
       <input v-model="formData.name" type="text" placeholder="Nombres y Apellidos" required />
-      <input v-model="formData.age" type="number" placeholder="Edad" required />
       <input v-model="formData.email" type="email" placeholder="Correo electrónico" required />
+      <input v-model="formData.phoneNumber" type="tel" placeholder="Numero de Celular" requred />
       <button type="submit" class="button cursor-pointer">Agregar Usuario</button>
     </form>
-
+    <!-- Añadir un captcha en la lista de correos https://inyomanjyotisa.medium.com/google-recaptcha-in-vuejs-73f78b6c3bae-->
     <!-- Mostrar la lista de usuarios -->
     <div v-if="users.length > 0">
       <h2>Usuarios Registrados:</h2>
@@ -27,8 +27,8 @@ const header = ref('Formulario de Registro de Usuarios')
 // Estado reactivo para los datos del formulario
 const formData = ref({
   name: '',
-  age: null,
   email: '',
+  phoneNumber: 0,
 })
 
 // Estado reactivo para la lista de usuarios
@@ -65,8 +65,8 @@ const submitForm = () => {
   // Limpiamos el formulario después de agregar el usuario
   formData.value = {
     name: '',
-    age: null,
     email: '',
+    phoneNumber: 0,
   }
 }
 </script>
