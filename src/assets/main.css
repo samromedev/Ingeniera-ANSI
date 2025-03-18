@@ -1,4 +1,8 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+:root {
+  --primary-color: #033074;
+}
 
 @layer components {
   .wrapper {
@@ -6,7 +10,7 @@
   }
 
   .images {
-    @apply w-full h-full object-cover rounded-4xl;
+    @apply w-full h-full object-cover;
   }
 
   .button {
@@ -19,18 +23,18 @@
 
   .footer-area {
     grid-template-areas:
-      "form"
-      "navigation"
-      "social-media"
-      "logo"
-      "copy";
+      'form'
+      'navigation'
+      'social-media'
+      'logo'
+      'copy';
   }
 
   @media (min-width: 1024px) {
     .footer-areaResponsive {
       grid-template-areas:
-        "logo           navigation  form"
-        "social-media   navigation  copy";
+        'logo           navigation  form'
+        'social-media   navigation  copy';
     }
   }
 }

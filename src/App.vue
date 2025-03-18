@@ -1,11 +1,8 @@
-<script setup>
-import NavBar from './components/NavBar.vue'
-import ContactForm from './components/ContactForm.vue'
-</script>
+<script setup></script>
 
 <template>
-  <NavBar />
-  <ContactForm />
+  <router-link to="/build"></router-link>
+  <router-view />
 </template>
 
 <style scoped></style>
